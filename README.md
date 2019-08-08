@@ -17,23 +17,27 @@ Network Analysis-Part II (NetworkX) is licensed under a <a href="http://creative
 
 ## Getting the Data
 
-We will be working with sample networked data sets based on the <a href="http://www.oxforddnb.com/">Oxford Dictionary of National Biography</a> and the <a href="http://www.sixdegreesoffrancisbacon.com/">Six Degrees of Francis Bacon</a> project. These data sets include a list of names and relationships for early seventeenth-century Quakers. Navigate to \storageprojectsHISHIS-295-02Quaker_Network_Data and copy the quakers_nodelist and quakers_edgelist CSV files to your Desktop. Or, visit <a href="http://sarahjpurcell.sites.grinnell.edu/digital_methods/files/">http://sarahjpurcell.sites.grinnell.edu/digital_methods/files/</a> and download the same files.
+We will be working with sample networked data sets based on the <a href="http://www.oxforddnb.com/">Oxford Dictionary of National Biography</a> and the <a href="http://www.sixdegreesoffrancisbacon.com/">Six Degrees of Francis Bacon</a> project. These data sets include a list of names and relationships for early seventeenth-century Quakers.
 
-<hr />
+Download the the quakers_nodelist and quakers_edgelist CSV files from this repository 
+
+Save the files to your Desktop.
+
+Open these files in Microsoft Excel to explore the data structure.
 
 ## Installing NetworkX
 
-<a href="http://sarahjpurcell.sites.grinnell.edu/digital_methods/wp-content/uploads/2018/08/Capture_networkx.png"><img class="aligncenter size-full wp-image-602" src="http://sarahjpurcell.sites.grinnell.edu/digital_methods/wp-content/uploads/2018/08/Capture_networkx.png" alt="" width="740" height="736" /></a>
+<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/capture_networkx.png?raw=true"><img class="aligncenter size-full wp-image-602" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/capture_networkx.png?raw=true" alt="" width="740" height="736" /></a></p>
 
 In a working Python environment, navigate to ..\Python27\Scripts in File Explorer.
 
-<a href="http://sarahjpurcell.sites.grinnell.edu/digital_methods/wp-content/uploads/2018/08/Capture_3-4.png"><img class="aligncenter size-full wp-image-600" src="http://sarahjpurcell.sites.grinnell.edu/digital_methods/wp-content/uploads/2018/08/Capture_3-4.png" alt="" width="982" height="514" /></a>
+<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_3.png?raw=true"><img class="aligncenter size-full wp-image-600" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_3.png?raw=true" alt="" width="982" height="514" /></a></p>
 
 Type cmd in the File Explorer navigation bar, and hit the Enter key. A command prompt window will open.
 
 Type `pip install networkx` in the command prompt window and hit the Enter key to install the NetworkX Python library.
 
-<a href="http://sarahjpurcell.sites.grinnell.edu/digital_methods/wp-content/uploads/2018/08/Capture_4-4.png"><img class="aligncenter size-full wp-image-601" src="http://sarahjpurcell.sites.grinnell.edu/digital_methods/wp-content/uploads/2018/08/Capture_4-4.png" alt="" width="979" height="281" /></a>
+<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_4.png?raw=true"><img class="aligncenter size-full wp-image-601" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_4.png?raw=true" alt="" width="979" height="281" /></a></p>
 
 Type `pip install community` in the command prompt window and hit the Enter key to install the Community Python library.
 
