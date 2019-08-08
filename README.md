@@ -43,7 +43,7 @@ If you want to install Python or NetworkX on your own computer, consult <a href=
 
 <hr />
 
-<h5>Loading Network Data in Python</h5>
+## Loading Network Data in Python
 
 1-We will be working with the same nodelist and edgelist CSV files we downloaded at the start of this tutorial. <strong>Copy or move those files into your Python directory (C:Python…) using File Explorer.</strong>
 
@@ -65,14 +65,13 @@ import community
 5-Now we’ll add code that tells Python to open the nodelist and edgelist CSV files and read the data contained in those files. Feel free to re-type this code, but you can also copy and paste from the online WordPress tutorial.
 
 ```python 
-with open('quakers_nodelist.csv', 'r') as nodecsv: <em># Open the file   </em>                   
-    nodereader = csv.reader(nodecsv) <em># Read the csv </em>
-<em>    # Retrieve the data (using Python list comprehension and list slicing to remove the header row)</em>
-    nodes = [n for n in nodereader][1:]                     
-node_names = [n[0] for n in nodes]<em> # Get a list of only the node names</em>                                      
-with open('quakers_edgelist.csv', 'r') as edgecsv: <em># Open the file</em>
-    edgereader = csv.reader(edgecsv)<em> # Read the csv    </em>
-    edges = [tuple(e) for e in edgereader][1:]<em> # Retrieve the data</em></pre>
+with open('quakers_nodelist.csv', 'r') as nodecsv: # Open the file                   
+    nodereader = csv.reader(nodecsv) # Read the csv
+    nodes = [n for n in nodereader][1:] # Retrieve the data (using Python list comprehension and list slicing to remove the header row)
+node_names = [n[0] for n in nodes] # Get a list of only the node names
+with open('quakers_edgelist.csv', 'r') as edgecsv: # Open the file
+    edgereader = csv.reader(edgecsv) # Read the csv
+    edges = [tuple(e) for e in edgereader][1:] # Retrieve the data
 ```
 
 6-`With open` opens our CSV files in the read (‘r’) mode and creates lists named nodecsv and edgecsv with that data. The additional indented lines read the CSV data, analyze the node names, retrieve the edge data, and remove the descriptive header information.
@@ -82,9 +81,8 @@ with open('quakers_edgelist.csv', 'r') as edgecsv: <em># Open the file</em>
 8-Before moving forward, let’s check to make sure our data has loaded correctly into Python.
 
 ```python
-print(len(node_names)) <em># prints the count of node names</em>
-print(len(edges)) <em># prints the total count of edges</em></pre>
-
+print(len(node_names)) # prints the count of node names
+print(len(edges)) # prints the total count of edges
 ```
 
 9-If you reopened the CSV files, you could confirm that Python had correctly loaded 119 node names (number of rows in the nodelist file) and 174 edges (number of rows in the edgelist file).
@@ -151,7 +149,7 @@ nx.set_node_attributes(G, hist_sig_dict, 'historical_significance')
 nx.set_node_attributes(G, gender_dict, 'gender')
 nx.set_node_attributes(G, birth_dict, 'birth_year')
 nx.set_node_attributes(G, death_dict, 'death_year')
-nx.set_node_attributes(G, id_dict, 'sdfb_id')</pre>
+nx.set_node_attributes(G, id_dict, 'sdfb_id')
 
 ```
 
@@ -162,7 +160,7 @@ nx.set_node_attributes(G, id_dict, 'sdfb_id')</pre>
 ```python
 
 for n in G.nodes(): # Loop through every node, in our data "n" will be the name of the person    
-    print(n, G.node[n]['birth_year']) # Access every node by name and "birth_year" attribute</pre>
+    print(n, G.node[n]['birth_year']) # Access every node by name and "birth_year" attribute
 ```
 <hr />
 
@@ -192,7 +190,7 @@ On a scale of 0 to 1, our network is not very dense, which is consistent with th
 ```python
 
 fell_whitehead_path=nx.shortest_path(G, source=”Margaret Fell”, target=”George Whitehead”)
-print(“Shortest path between Fell and Whitehead:”, fell_whitehead_path)</pre>
+print(“Shortest path between Fell and Whitehead:”, fell_whitehead_path)
 
 ```
 
@@ -215,23 +213,20 @@ Instead, we can identify the most significant component or section of our networ
 
 ```python
 
-<em># If your Graph has more than one component, this will return False
-</em>
+# If your Graph has more than one component, this will return False
 
 print(nx.is_connected(G)) 
-<em>
-# Next, use nx.connected_components to get the list of components,</em>
-<em># then use the max() command to find the largest one:</em>
+
+# Next, use nx.connected_components to get the list of components, then use the max() command to find the largest one:
 
 components = nx.connected_components(G)
 largest_component = max(components, key=len) 
-<em>
-# Create a "subgraph" of just the largest component</em>
-<em># Then calculate the diameter of the subgraph, just like you did with density.</em> 
+
+# Create a "subgraph" of just the largest component, then calculate the diameter of the subgraph, just like you did with density.
 
 subgraph = G.subgraph(largest_component)
 diameter = nx.diameter(subgraph)
-print("Network diameter of largest component:", diameter)</pre>
+print("Network diameter of largest component:", diameter)
 ```
 
 <hr />
@@ -244,7 +239,7 @@ print("Network diameter of largest component:", diameter)</pre>
 
 degree_dict=dict(G.degree(G.nodes()))
 nx.set_node_attributes(G, degree_dict, ‘degree’)
-print(degree_dict)</pre>
+print(degree_dict)
 ```
 
 Creates an object named degree_dict and uses NetworkX to calculate the degree of centrality on the nodes in the Graph object. The second line of code adds that centrality calculation to each node as an attribute.
@@ -267,18 +262,16 @@ Betweenness centrality calculates the number of shortest path routes that go thr
 
 ```python 
 
-betweenness_dict = nx.betweenness_centrality(G) <em># Run betweenness centrality
-</em>
+betweenness_dict = nx.betweenness_centrality(G) # Run betweenness centrality
 nx.set_node_attributes(G, betweenness_dict, 'betweenness')
 sorted_betweenness = sorted(betweenness_dict.items(), key=itemgetter(1), reverse=True)
  
 print("Top 20 nodes by betweenness centrality:")
 for b in sorted_betweenness[:20]:
     print(b)
- 
  ```
     
- As we see in these results, nodes with significant Betweenness Centrality calculations are not the same list that appeared for the standard Centrality Degree calculations. Women like Mary Penington and Elizabeth Leavens have increased significance as broker nodes, when their role was not visible in the standard centrality calculations.
+As we see in these results, nodes with significant Betweenness Centrality calculations are not the same list that appeared for the standard Centrality Degree calculations. Women like Mary Penington and Elizabeth Leavens have increased significance as broker nodes, when their role was not visible in the standard centrality calculations.
 
 We are only scratching the surface of the metrics you can calculate on a network using NetworkX. For more information and examples, consult <a href="https://programminghistorian.org/en/lessons/exploring-and-analyzing-network-data-with-python">The Programming Historian’s tutorial</a>.
 
@@ -300,10 +293,10 @@ If you navigate to your <strong>C:Python… directory</strong> in <strong>File E
 
 # Reflection questions
 <ul>
- 	<li><em>This was a more technically-oriented tutorial than most others in the course. What did you enjoy? What did you find challenging?</em></li>
- 	<li><em>What was the most confusing or unclear part of the tutorial? What questions do you have about network analysis and the digital tools historians can use to analyze networks?</em></li>
- 	<li><em>What was the most surprising or interesting part of the tutorial?</em></li>
- 	<li><em>How did you understanding of the data set change over the course of the tutorial—what thoughts or questions did you have about the data when we were working with Palladio, versus NetworkX, versus Gephi?</em></li>
- 	<li><em>What types of historical data might be well-suited for network analysis? What kinds of data might not work well for network analysis?</em></li>
- 	<li><em>How would you move forward with a network analysis project? What types of data would you be interested in exploring, and what kinds of research questions would you want to ask?</em></li>
+ 	<li>This was a more technically-oriented tutorial than most others in the course. What did you enjoy? What did you find challenging?</li>
+ 	<li>What was the most confusing or unclear part of the tutorial? What questions do you have about network analysis and the digital tools historians can use to analyze networks?</li>
+ 	<li>What was the most surprising or interesting part of the tutorial?</li>
+ 	<li>How did you understanding of the data set change over the course of the tutorial—what thoughts or questions did you have about the data when we were working with Palladio, versus NetworkX, versus Gephi?</li>
+ 	<li>What types of historical data might be well-suited for network analysis? What kinds of data might not work well for network analysis?</li>
+ 	<li>How would you move forward with a network analysis project? What types of data would you be interested in exploring, and what kinds of research questions would you want to ask?</li>
 </ul>
