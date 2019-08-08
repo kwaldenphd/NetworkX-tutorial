@@ -27,7 +27,7 @@ Open these files in Microsoft Excel to explore the data structure.
 
 ## Installing NetworkX
 
-<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/capture_networkx.png?raw=true"><img class="aligncenter size-full wp-image-602" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/capture_networkx.png?raw=true" alt="" width="740" height="736" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/capture_networkx.PNG?raw=true"><img class="aligncenter size-full wp-image-602" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/capture_networkx.PNG?raw=true" alt="" width="740" height="736" /></a></p>
 
 In a working Python environment, navigate to ..\Python27\Scripts in File Explorer.
 
@@ -121,8 +121,8 @@ print(nx.info(G))
 13-The power of NetworkX allows you to add attributes to the nodes and edges in your Graph object. We’ll add this data through a two-step process—creating a Python dictionary for the attribute values, then connecting the attributes in the dictionary to the appropriate node.
 
 <blockquote><em>Hang in there—the next step is the most technically complex part of this tutorial.</em></blockquote>
+
 14-We’ll create empty dictionaries for each of the attribute fields in our nodelist CSV file.
-<blockquote>
 
 ```python 
 hist_sig_dict = {}
