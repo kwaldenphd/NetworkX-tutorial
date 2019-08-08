@@ -27,17 +27,17 @@ Open these files in Microsoft Excel to explore the data structure.
 
 ## Installing NetworkX
 
-<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/capture_networkx.PNG?raw=true"><img class="aligncenter size-full wp-image-602" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/capture_networkx.PNG?raw=true" alt="" width="740" height="736" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_networkx.PNG?raw=true"><img class="aligncenter size-full wp-image-602" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_networkx.PNG?raw=true" alt="" width="740" height="736" /></a></p>
 
 In a working Python environment, navigate to ..\Python27\Scripts in File Explorer.
 
-<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_3.png?raw=true"><img class="aligncenter size-full wp-image-600" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_3.png?raw=true" alt="" width="982" height="514" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_3.PNG?raw=true"><img class="aligncenter size-full wp-image-600" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_3.PNG?raw=true" alt="" width="982" height="514" /></a></p>
 
 Type cmd in the File Explorer navigation bar, and hit the Enter key. A command prompt window will open.
 
 Type `pip install networkx` in the command prompt window and hit the Enter key to install the NetworkX Python library.
 
-<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_4.png?raw=true"><img class="aligncenter size-full wp-image-601" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_4.png?raw=true" alt="" width="979" height="281" /></a></p>
+<p align="center"><a href="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_4.PNG?raw=true"><img class="aligncenter size-full wp-image-601" src="https://github.com/kwaldenphd/NetworkX-tutorial/blob/master/screenshots/Capture_4.PNG?raw=true" alt="" width="979" height="281" /></a></p>
 
 Type `pip install community` in the command prompt window and hit the Enter key to install the Community Python library.
 
